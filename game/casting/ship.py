@@ -27,8 +27,7 @@ class Ship(Actor):
         x = position.get_x()
         y = position.get_y()
 
-        if x < constants.WIDTH and x >= 0:
-            x += velocity.get_x()
+        x += velocity.get_x()
        
         position_updated = Point(x,y)
         self.set_position(position_updated)
