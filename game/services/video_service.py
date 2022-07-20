@@ -81,13 +81,13 @@ class VideoService:
 
     def draw_background(self):
         """Draws the background texture on the screen."""
-        texture = pyray.load_texture("Final-project/asteroids/game/images/starfield.png")
+        texture = pyray.load_texture("game\images\starfield.png")
         pyray.draw_texture(texture, 0, 0, pyray.WHITE)
         
 
     def draw_game_over(self, final_score):
         """Draw a game over message and the final score on the screen."""
-        texture = pyray.load_texture("Final-project/asteroids/game/images/starfield.png")
+        texture = pyray.load_texture("game\images\starfield.png")
         pyray.draw_texture(texture, 0, 0, pyray.WHITE)
         pyray.draw_text(final_score, constants.WIDTH//2, 20, 15, pyray.WHITE)
         pyray.draw_text("GAME OVER", constants.WIDTH//2, constants.HEIGHT//2, 25, pyray.WHITE)

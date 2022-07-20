@@ -21,7 +21,7 @@ class Cast:
         """
         if not group in self._actors.keys():
             self._actors[group] = []
-            
+        
         if not actor in self._actors[group]:
             self._actors[group].append(actor)
 

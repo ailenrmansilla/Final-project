@@ -13,7 +13,7 @@ class GenerateAsteroids():
     def __init__(self):
         """Initializes the GenerateAsteroids class creating an array with the sprites sources.
         """
-        self._asteroids_sprites = ["Final-project/asteroids/game/images/a1.png","Final-project/asteroids/game/images/a2.png","Final-project/asteroids/game/images/a3.png","Final-project/asteroids/game/images/a4.png","Final-project/asteroids/game/images/a5.png","Final-project/asteroids/game/images/a6.png"]
+        self._asteroids_sprites = ["game\images\game-asteroid1.png","game\images\game-asteroid2.png","game\images\game-asteroid3.png","game\images\game-asteroid4.png","game\images\game-asteroid5.png","game\images\game-asteroid6.png"]
 
     def create_asteroid(self):
         """Creates an asteroid on the top of the screen and set a random decreasing velocity"""

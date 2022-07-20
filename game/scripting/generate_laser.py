@@ -25,5 +25,5 @@ class GenerateLaser():
         y = position.get_y()
         laser.set_position(Point(x,y)) # we send the current position of the ship
         laser.set_velocity(Point(0,12))
-        laser.set_src("Final-project/asteroids/game/images/laser_red.png")
+        laser.set_src("game\images\laser_red.png")
         return laser

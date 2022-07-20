@@ -34,10 +34,10 @@ class HandleCollisionsAction(Action):
         """
         ship = cast.get_first_actor("ship")
         if not ship.get_collided_state():
-            self._check_asteroids_collisions(cast)
+            self._check_asteroids_collisions(cast,script)
             self._check_actors_on_screen(cast)
         
-    def _check_asteroids_collisions(self, cast):
+    def _check_asteroids_collisions(self, cast,script):
         """Check if one of the asteroids on screen touches the ship or the laser.
         Args:
             cast(Cast): A collection of the game's Actors"""
@@ -49,7 +49,7 @@ class HandleCollisionsAction(Action):
         for asteroid in all_asteroids:
             if ship.get_position().equals(asteroid.get_position()):
                 ship.change_to_collided()
-                self._handle_game_over(cast)
+                self._handle_game_over(cast,script)
 
         for asteroid in all_asteroids:
             for laser in lasers_shooted:
@@ -78,12 +78,12 @@ class HandleCollisionsAction(Action):
             if laser.get_position().get_y() <= 10:
                 cast.remove_actor("laser",laser)
 
-    def _handle_game_over(self,cast):
+    def _handle_game_over(self,cast,script):
         """Calls the draw game over method from _video_service and draw
         
         Args:
         cast (Cast): The cast of Actors in the game."""
-
+#REMOVE THE UPDATE STUFF, OR CHECK HOW TO STAY IN THE GAME OVER STATE
         ship = cast.get_first_actor("ship")
         self._video_service.clear_buffer()
         self._video_service.draw_game_over(ship.get_score())

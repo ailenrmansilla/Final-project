@@ -22,7 +22,7 @@ def main():
     y = constants.HEIGHT - 150
     ship.set_position(Point(x,y))
     ship.set_velocity(Point(0,0))
-    ship.set_src("Final-project/asteroids/game/images/player_ship.png")
+    ship.set_src("game\images\player_ship.png")
     cast.add_actor("ship", ship) 
     keyboard_service = KeyboardService()  #check if the cell size is necessary
     video_service = VideoService()
