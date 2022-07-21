@@ -1,5 +1,4 @@
-from turtle import position
-import pyray
+import pyray,time
 import constants
 
 class VideoService:
@@ -91,4 +90,8 @@ class VideoService:
         pyray.draw_texture(texture, 0, 0, pyray.WHITE)
         pyray.draw_text(final_score, constants.WIDTH//2, 20, 15, pyray.WHITE)
         pyray.draw_text("GAME OVER", constants.WIDTH//2, constants.HEIGHT//2, 25, pyray.WHITE)
+        pyray.end_drawing()
+        time.sleep(5)
+        exit()
+
 
